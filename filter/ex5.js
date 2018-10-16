@@ -8,7 +8,7 @@ La fonction doit renvoyer un tableau ne contenant que les éléments dont le nom
 la chaîne recherchée.
 
 Il y a là aussi plusieurs façons d'écrire cette fonction, en utilisant indexOf ou includes.
-Une petite difficulté supplémentaire: la recherche être "case insensitive" (insensible à la
+Une petite difficulté supplémentaire: la recherche doit être "case insensitive" (insensible à la
 casse), c'est-à-dire qu'une recherche sur 'star' ne doit pas éliminer les chaînes contenant
 'Star'.
 
@@ -39,6 +39,7 @@ Exemple d'entrée:
  */
 
 function searchWordFilter(items, search) {
+    return items.filter( film => film.toLowerCase().includes(search.toLowerCase()) );
 }
 
 // Ne pas modifier l'export
